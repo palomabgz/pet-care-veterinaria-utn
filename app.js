@@ -5,9 +5,13 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 require('dotenv').config();
+
+var session = require('express-session');
 var pool = require('./models/bd');
 
 var indexRouter = require('./routes/index'); //routes/index.js
+var loginRouter = require('./routes/admin/login'); //routes/admin.js
+var adminRouter = require('./routes/admin/comentarios'); //routes/comentarios.js
 
 var app = express();
 
@@ -20,8 +24,28 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: '1w2e3r4t5y6u7i8o9p',
+  resave: false,
+  saveUninitialized: true
+}))
+
+secured = async (req, res, next) => {
+  try {
+    console.log(req.session.id_usuario);
+    if (req.session.id_usuario) {
+      next();
+    } else {
+      res.redirect('/admin/login');
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 app.use('/', indexRouter);
+app.use('/admin/login', loginRouter);
+app.use('/admin/comentarios', secured, adminRouter);
 
 // consulta:
 pool.query('select * from comentarios_bd').then(function (resultados){
