@@ -45,7 +45,7 @@ secured = async (req, res, next) => {
 
 app.use('/', indexRouter);
 app.use('/admin/login', loginRouter);
-app.use('/admin/comentarios', secured, adminRouter);
+app.use('/admin/admin/comentarios', secured, adminRouter);
 
 // consulta:
 pool.query('select * from comentarios_bd').then(function (resultados){
