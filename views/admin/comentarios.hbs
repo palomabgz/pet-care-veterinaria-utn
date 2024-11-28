@@ -1,7 +1,18 @@
-<div>
-    <h1>¡Hola {{persona}}!</h1>
-    <p>Crea tu comentario</p>
-    <input type="text">
-    <button class="btn">Enviar</button>
-    <button><a href="/admin/login/logout" style="text-decoration: none">Cerrar Sesión</a></button>
+<div class="iniciar">
+    <h1>¡Hola {{usuario}}!</h1>
+    <p>Déjanos tu comentario</p>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">Contenido</label>
+            <input type="textarea" class="form-control" id="content" name="content">
+        </div>
+        <div class="btn-iniciar">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button class="btn btn-primary"><a href="/admin/login/logout">Cerrar Sesión</a></button>
+        </div>
+    </form>
 </div>

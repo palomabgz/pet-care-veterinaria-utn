@@ -160,6 +160,24 @@ body {
     height: 30px;
 }
 
+.iniciar {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.iniciar h1 {
+    margin-top: 100px;
+}
+
+.iniciar button {
+    margin: 2px;
+}
+
 .contenedor-footer {
     display: flex;
     justify-content: space-around;
