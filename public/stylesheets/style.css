@@ -107,10 +107,15 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-size: 13px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.table-comentarios {
+    margin: 30px;
+    width: 700px;
 }
 
 .table {
@@ -118,19 +123,29 @@ body {
     height: 250px;
 }
 
+.contenedor-novedades {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+
 .novedades {
-    width: 500px;
-    height: 250px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 205, 205);
     border-radius: 20px;
     padding: 20px;
-    overflow: scroll;
+    margin: 10px;
 }
 
 .novedades h4 {
     color: rgb(163, 0, 0);
+}
+
+.contenedor-comentarios {
+    display: flex;
+    flex-direction: column;
 }
 
 .opiniones {
