@@ -30,6 +30,11 @@ body {
     font-size: 14px;
 }
 
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
 .btn:hover {
     background: rgb(208, 0, 0);
     border-color: rgb(208, 0, 0);
@@ -143,17 +148,14 @@ body {
     color: rgb(163, 0, 0);
 }
 
-.contenedor-comentarios {
-    display: flex;
-    flex-direction: column;
-}
-
 .opiniones {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    width: 300px;
-    height: 250px;
+    width: 350px;
+    height: 270px;
     border-style: solid;
     border-color: rgb(227, 227, 227);
     background-color: rgb(232, 232, 232);
@@ -162,14 +164,16 @@ body {
 }
 
 .caption {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 25px;
 }
 
 .caption h5 {
     color: rgb(163, 0, 0);
 }
 
+.content {
+    height: 120px;
+}
 .form-control {
     width: 300px;
     height: 30px;
