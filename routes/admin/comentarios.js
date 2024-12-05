@@ -19,4 +19,10 @@ router.get('/eliminar/:id', async (req, res, next) => {
     res.redirect('/admin/comentarios');
 });
 
+router.get('/añadir', (req, res, next) => {
+    res.render('admin/añadir', {
+        layout: 'admin/layout'
+    });
+});
+
 module.exports = router;

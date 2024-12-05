@@ -1,0 +1,29 @@
+    <!-- COMENTARIOS -->
+    <div class="row">
+        <div class="col">
+            <table class="table-comentarios">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col" class="text-right"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each comentarios}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{nombre}}</td>
+                            <td>{{comentario}}</td>
+                            <td class="text-right">
+                                <a href="" class="btn"><i>edit</i></a>
+                                <a href="/admin/comentarios/eliminar/{{id}}" class="btn"><i>delete</i></a>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <!-- FIN COMENTARIOS -->
