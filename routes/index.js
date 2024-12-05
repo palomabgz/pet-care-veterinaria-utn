@@ -1,11 +1,16 @@
 var express = require('express');
 var router = express.Router();
+var comentariosModel = require('../models/comentariosModel');
 
 var nodemailer = require('nodemailer');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index');
+router.get('/', async function(req, res, next) {
+
+  var comentarios = await comentariosModel.getComentarios();
+  res.render('index' , {
+    comentarios
+  });
 });
 
 router.post('/', async (req, res, next) => {

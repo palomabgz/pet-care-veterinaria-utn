@@ -90,30 +90,14 @@
                                         <p>Calificaciones y opiniones</p>
                                     </div>
                                 </div>
+                                {{#each comentarios}}
                                 <div class="carousel-item content" data-bs-interval="2000">
                                     <div class="caption">
-                                        <h5>Ana María</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <h5>{{nombre}}</h5>
+                                        <p>{{content}}</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item content" data-bs-interval="3000">
-                                    <div class="caption">
-                                        <h5>Facundo</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item content" data-bs-interval="4000">
-                                    <div class="caption">
-                                        <h5>Sofía</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item content" data-bs-interval="5000">
-                                    <div class="caption">
-                                        <h5>Lorena</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    </div>
-                                </div>
+                                {{/each}}
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
