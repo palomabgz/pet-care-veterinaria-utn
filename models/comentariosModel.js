@@ -6,6 +6,12 @@ async function getComentarios() {
         return rows;
 }
 
+async function getComentarioById(id) {
+    var query = "select * from comentarios_bd where id = ?";
+    var rows = await pool.query(query, [id]);
+    return rows[0];
+}
+
 async function deleteComentariosById(id) {
     var query = "delete from comentarios_bd where id = ?";
     var rows = await pool.query(query, [id]);
@@ -24,4 +30,4 @@ async function insertComentario(obj) {
     }
 }
 
-module.exports = { getComentarios, deleteComentariosById, insertComentario }
+module.exports = { getComentarios, deleteComentariosById, insertComentario, getComentarioById }

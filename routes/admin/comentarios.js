@@ -13,6 +13,15 @@ router.get('/', async function(req, res, next) {
     });
 });
 
+router.get('/modificar/:id', async (req, res, next) => {
+    var id = req.params.id;
+    var comentario = await comentariosModel.getComentarioById(id);
+    res.render('admin/modificar', {
+        layout: 'admin/layout',
+        comentario
+    });
+});
+
 router.get('/eliminar/:id', async (req, res, next) => {
     var id = req.params.id;
     await comentariosModel.deleteComentariosById(id);
