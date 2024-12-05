@@ -1,29 +1,18 @@
-    <!-- COMENTARIOS -->
-    <div class="row">
-        <div class="col">
-            <table class="table-comentarios">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Usuario</th>
-                        <th scope="col" class="text-right"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{#each comentarios}}
-                        <tr>
-                            <th scope="row">{{id}}</th>
-                            <td>{{nombre}}</td>
-                            <td>{{comentario}}</td>
-                            <td class="text-right">
-                                <a href="" class="btn"><i>edit</i></a>
-                                <a href="/admin/comentarios/eliminar/{{id}}" class="btn"><i>delete</i></a>
-                            </td>
-                        </tr>
-                    {{/each}}
-                </tbody>
-            </table>
-
+<div>
+    <form action="/admin/comentarios/anadir" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name">
         </div>
-    </div>
-    <!-- FIN COMENTARIOS -->
+        <div class="mb-3">
+            <label for="content" class="form-label">Comentario</label>
+            <input type="textarea" class="form-control" id="content" name="content">
+        </div>
+        <div class="btn-iniciar">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+    {{#if error}}
+        <p>{{message}}</p>
+    {{/if}}
+</div>

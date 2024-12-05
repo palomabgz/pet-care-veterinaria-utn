@@ -12,4 +12,16 @@ async function deleteComentariosById(id) {
     return rows;
 }
 
-module.exports = { getComentarios, deleteComentariosById }
+async function insertComentario(obj) {
+    try {
+        var query = "insert into comentarios set ?";
+        var rows = await pool.query(query, [obj]);
+        return rows;
+
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+}
+
+module.exports = { getComentarios, deleteComentariosById, insertComentario }

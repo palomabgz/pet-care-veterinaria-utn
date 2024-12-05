@@ -25,4 +25,26 @@ router.get('/añadir', (req, res, next) => {
     });
 });
 
+router.post('/anadir', async (req, res, next) => {
+    try {
+        if (req.body.name != "" && req.body.content != "") {
+            await comentariosModel.insertComentario(req.body);
+            res.redirect('/admin/comentarios');
+        } else {
+            res.render('admin/añadir', {
+                layout: 'admin/layout',
+                error: true,
+                message: 'Todos los campos son obligatorios'
+            });
+        }
+    } catch (error) {
+        console.log(error);
+        res.render('admin/añadir', {
+            layout: 'admin/layout',
+            error: true,
+            message: 'Error al insertar comentario'
+        });
+    }
+});
+
 module.exports = router;
