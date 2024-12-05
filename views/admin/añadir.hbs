@@ -2,11 +2,11 @@
     <form action="/admin/comentarios/anadir" method="post">
         <div class="mb-3">
             <label for="name" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="name" name="name">
+            <input type="text" class="form-control" name="name">
         </div>
         <div class="mb-3">
             <label for="content" class="form-label">Comentario</label>
-            <input type="textarea" class="form-control" id="content" name="content">
+            <textarea placeholder="Escribe tu comentario" class="form-control" name="content"></textarea>
         </div>
         <div class="btn-iniciar">
             <button type="submit" class="btn btn-primary">Guardar</button>

@@ -14,7 +14,7 @@ async function deleteComentariosById(id) {
 
 async function insertComentario(obj) {
     try {
-        var query = "insert into comentarios set ?";
+        var query = "insert into comentarios_bd set ?";
         var rows = await pool.query(query, [obj]);
         return rows;
 
