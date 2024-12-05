@@ -22,6 +22,25 @@ router.get('/modificar/:id', async (req, res, next) => {
     });
 });
 
+router.post('/modificar', async (req, res, next) => {
+    try {
+        var obj = {
+            nombre: req.body.name,
+            comentario: req.body.content
+        }
+        await comentariosModel.updateComentariosById(req.body.id, obj);
+        res.redirect('/admin/comentarios');
+
+    } catch (error) {
+        console.log(error);
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            error: true,
+            message: 'Error al modificar comentario'
+        });
+    }
+});
+
 router.get('/eliminar/:id', async (req, res, next) => {
     var id = req.params.id;
     await comentariosModel.deleteComentariosById(id);

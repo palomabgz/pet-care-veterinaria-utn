@@ -30,4 +30,15 @@ async function insertComentario(obj) {
     }
 }
 
-module.exports = { getComentarios, deleteComentariosById, insertComentario, getComentarioById }
+async function updateComentarioById(id, obj) {
+    try {
+        var query = "update comentarios_bd set ? where id = ?";
+        var rows = await pool.query(query, [obj, id]);
+    return rows;
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+}
+
+module.exports = { getComentarios, deleteComentariosById, insertComentario, getComentarioById, updateComentarioById };
