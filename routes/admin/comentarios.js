@@ -48,19 +48,19 @@ router.get('/eliminar/:id', async (req, res, next) => {
     res.redirect('/admin/comentarios');
 });
 
-router.get('/añadir', (req, res, next) => {
-    res.render('admin/añadir', {
+router.get('/agregar', (req, res, next) => {
+    res.render('admin/agregar', {
         layout: 'admin/layout'
     });
 });
 
-router.post('/anadir', async (req, res, next) => {
+router.post('/agregar', async (req, res, next) => {
     try {
         if (req.body.name != "" && req.body.content != "") {
             await comentariosModel.insertComentario(req.body);
             res.redirect('/admin/comentarios');
         } else {
-            res.render('admin/añadir', {
+            res.render('admin/agregar', {
                 layout: 'admin/layout',
                 error: true,
                 message: 'Todos los campos son obligatorios'
@@ -68,7 +68,7 @@ router.post('/anadir', async (req, res, next) => {
         }
     } catch (error) {
         console.log(error);
-        res.render('admin/añadir', {
+        res.render('admin/agregar', {
             layout: 'admin/layout',
             error: true,
             message: 'Error al insertar comentario'
