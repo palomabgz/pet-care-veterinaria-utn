@@ -28,7 +28,8 @@ router.post('/modificar', async (req, res, next) => {
             nombre: req.body.name,
             comentario: req.body.content
         }
-        await comentariosModel.updateComentariosById(req.body.id, obj);
+        var id = req.body.id;
+        await comentariosModel.updateComentariosById(id, obj);
         res.redirect('/admin/comentarios');
 
     } catch (error) {
