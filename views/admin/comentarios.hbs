@@ -1,25 +1,26 @@
 <div class="iniciar">
     <h1>¡Hola {{usuario}}!</h1>
-    <p>Déjanos tu comentario</p>
+    <p>Dejanos tu comentario</p>
 
     <!-- COMENTARIOS -->
-    <h2>Opiniones</h2>
     <div class="row">
         <div class="col">
             <table class="table-comentarios">
+            <div>
+                <h6>Otros comentarios...</h6>
+            </div>
                 <thead>
                     <tr>
                         <th scope="col"></th>
-                        <th scope="col">Usuario</th>
-                        <th scope="col">Comentario</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
                         <th scope="col" class="text-right"></th>
                     </tr>
                 </thead>
                 <tbody>
                     {{#each comentarios}}
                         <tr>
-                            <th scope="row">{{id}}</th>
-                            <td>{{nombre}}</td>
+                            <th scope="row">{{nombre}}</th>
                             <td>{{comentario}}</td>
                             <td class="text-right">
                                 <a href="/admin/comentarios/modificar/{{id}}" class="btn"><i>edit</i></a>

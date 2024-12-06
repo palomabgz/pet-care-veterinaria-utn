@@ -41,4 +41,4 @@ async function updateComentarioById(id, obj) {
     }
 }
 
-module.exports = { getComentarios, deleteComentariosById, insertComentario, getComentarioById, updateComentarioById };
+module.exports = { getComentarios, deleteComentariosById, insertComentario, getComentarioById, updateComentarioById}

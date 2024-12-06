@@ -86,20 +86,14 @@
                 </div>
 
                 <!-- NOVEDADES -->
-                <div class="contenedor-novedades">
-                    <div class="novedades">
-                        <h4>Novedades</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quidem quasi corrupti velit officia eos quis, inventore ratione itaque voluptates ducimus laudantium voluptatibus sunt in! Nobis ipsa omnis harum ipsam.</p>
+                {{#each novedades}}
+                    <div class="contenedor-novedades">
+                        <div class="novedades">
+                            <h6>{{titulo}}</h6>
+                            <p>{{contenido}}</p>
+                        </div>
                     </div>
-                    <div class="novedades">
-                        <h4>Novedades</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quidem quasi corrupti velit officia eos quis, inventore ratione itaque voluptates ducimus laudantium voluptatibus sunt in! Nobis ipsa omnis harum ipsam.</p>
-                    </div>
-                    <div class="novedades">
-                        <h4>Novedades</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quidem quasi corrupti velit officia eos quis, inventore ratione itaque voluptates ducimus laudantium voluptatibus sunt in! Nobis ipsa omnis harum ipsam.</p>
-                    </div>
-                </div>
+                {{/each}}
                 <!-- FIN NOVEDADES -->
             </div>
         <!-- FIN CUERPO -->

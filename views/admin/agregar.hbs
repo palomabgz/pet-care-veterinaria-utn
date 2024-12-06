@@ -1,7 +1,6 @@
-<div>
-    <h1>¡Hola {{usuario}}!</h1>
-    <p>Déjanos tu comentario</p>
-</div>
+<div class="iniciar">
+    <h1>Dejanos tu comentario</h1>
+    <br>
 <div>
     <form action="/admin/comentarios/agregar" method="post">
         <div class="mb-3">
@@ -10,13 +9,15 @@
         </div>
         <div class="mb-3">
             <label for="content" class="form-label">Comentario</label>
-            <textarea placeholder="Escribe tu comentario" class="form-control" name="content"></textarea>
+            <textarea placeholder="Escribe tu comentario" class="form-control" name="comentario"></textarea>
         </div>
         <div class="btn-iniciar">
             <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="submit" class="btn btn-primary"><a href="/admin/comentarios">Regresar</a></button>
         </div>
     </form>
     {{#if error}}
         <p>{{message}}</p>
     {{/if}}
+    </div>
 </div>

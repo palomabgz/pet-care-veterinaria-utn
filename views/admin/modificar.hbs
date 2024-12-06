@@ -1,23 +1,23 @@
-<div>
-    <h1>¡Hola {{usuario}}!</h1>
+<div class="iniciar">
     <p>Modifica tu comentario</p>
-</div>
-<div>
-    <form action="/admin/comentarios/modificar" method="post">
-    <input type="hidden" name="id" value="{{id}}">
-        <div class="mb-3">
-            <label for="name" class="form-label">Nombre</label>
-            <input type="text" class="form-control" name="name" value="{{comentario.nombre}}">
-        </div>
-        <div class="mb-3">
-            <label for="content" class="form-label">Comentario</label>
-            <textarea placeholder="Escribe tu comentario" class="form-control" name="content">{{comentario.comentario}}</textarea>
-        </div>
-        <div class="btn-iniciar">
-            <button type="submit" class="btn btn-primary">Modificar</button>
-        </div>
-    </form>
-    {{#if error}}
-        <p>{{message}}</p>
-    {{/if}}
+    <div>
+        <form action="/admin/comentarios/modificar" method="post">
+        <input type="hidden" name="id" value="{{id}}">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="name" value="{{comentario.nombre}}">
+            </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">Comentario</label>
+                <textarea placeholder="Escribe tu comentario" class="form-control" name="content">{{comentario.comentario}}</textarea>
+            </div>
+            <div class="btn-iniciar">
+                <button type="submit" class="btn btn-primary">Modificar</button>
+                <button type="submit" class="btn btn-primary"><a href="/admin/comentarios">Regresar</a></button>
+            </div>
+        </form>
+        {{#if error}}
+            <p>{{message}}</p>
+        {{/if}}
+    </div>
 </div>
