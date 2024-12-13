@@ -14,7 +14,7 @@
         <!-- NAVEGACIÓN. -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="logo"><img src="/images/LOGO.png" alt="logo"></a>
+                <a class="navbar-brand"><img src="/images/LOGO.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -24,16 +24,10 @@
                         <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Productos</a>
+                        <a class="nav-link" href="#">Citas</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Servicios
-                        </a>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Peluquería Canina</a></li>
-                        <li><a class="dropdown-item" href="#">Atención Felina</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
                     </li>
                     </ul>
                 </div>
@@ -58,15 +52,14 @@
                             <label for="phone" class="form-label">Teléfono:</label>
                             <input type="text" class="form-control" id="phone" name="phone">
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="checkbox" name="checkbox">
-                            <label class="form-check-label" for="checkbox">Suscribirme</label>
-                        </div>
+                        <br>
                         <button type="submit" class="btn btn-primary">Enviar</button>
+                        <br>
+                        {{message}}
                     </form>
-                    {{message}}
 
-                    <div>
+                    <div class="local">
+                        <h5>Ubicación de nuestro local:</h5>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26273.15522333088!2d-58.53383226296685!3d-34.60050984372218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7d17aecb4c5%3A0x2ec18aeefab8400!2sVilla%20Devoto%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1729542967165!5m2!1ses!2sar" width="400" height="300"></iframe>
                     </div>
                     <!-- FIN FORMULARIO -->
@@ -85,7 +78,7 @@
                                 <div class="carousel-item active content" data-bs-interval="1000">
                                     <div class="caption">
                                         <h5>Nuestros Clientes</h5>
-                                        <p>Calificaciones y opiniones</p>
+                                        <p>Comentarios y opiniones</p>
                                     </div>
                                 </div>
                                 {{#each comentarios}}
@@ -108,15 +101,14 @@
                             <button class="btn"><a href="/admin/comentarios/agregar">Añadir</a></button>
                         </div>
                     </div>
-                </div>
                 <!-- FIN OPINIONES -->
-
+                </div>
                 <!-- CREADOR -->
                 <div class="creador">
                     <div class="redes">
-                        <img src="img/INSTA.png" alt="instagram">
-                        <img src="img/WPP.png" alt="whatsapp">
-                        <img src="img/TWITTER.png" alt="twitter">
+                        <img src="images/INSTA.png" alt="instagram">
+                        <img src="images/WPP.png" alt="whatsapp">
+                        <img src="images/TWITTER.png" alt="twitter">
                     </div>
                     <h6>Creado por Paloma Belén González
                     <br>Universidad Tecnológica Nacional, 2024.</h6>
