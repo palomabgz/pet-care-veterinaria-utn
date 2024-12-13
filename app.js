@@ -10,8 +10,10 @@ var session = require('express-session');
 var pool = require('./models/bd');
 
 var indexRouter = require('./routes/index'); //routes/index.js
+var serviciosRouter = require('./routes/admin/servicios'); //routes/servicios.js
 var loginRouter = require('./routes/admin/login'); //routes/admin.js
 var adminRouter = require('./routes/admin/comentarios'); //routes/comentarios.js
+var novedadesRouter = require('./routes/admin/novedades'); //routes/novedades.js
 
 var app = express();
 
@@ -45,9 +47,19 @@ secured = async (req, res, next) => {
 app.use('/', indexRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/comentarios', secured, adminRouter);
+app.use('/admin/novedades', novedadesRouter);
+app.use('/admin/servicios', serviciosRouter);
 
 // consulta:
 pool.query('select * from comentarios_bd').then(function (resultados){
+  console.log(resultados)
+});
+
+pool.query('select * from servicios_bd').then(function (resultados){
+  console.log(resultados)
+});
+
+pool.query('select * from novedades_bd').then(function (resultados){
   console.log(resultados)
 });
 
