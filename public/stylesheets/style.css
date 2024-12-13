@@ -58,7 +58,7 @@ body {
 
 .titulo p, h6 {
     font-size: 14px;
-    width: 500px;
+    width: 800px;
 }
 
 .fondo-foto {
@@ -74,7 +74,7 @@ body {
 }
 
 .card {
-    width: 300px;
+    width: 400px;
     font-size: 13px;
     padding: 15px;
     margin: 20px;
@@ -84,17 +84,29 @@ body {
     box-shadow: 5px 2px 2px rgba(241, 241, 241, 0.569);
 }
 
+.card h5 {
+    color: rgb(163, 0, 0);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.card p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .cards {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .sizecard {
-    width: 300px;
+    width: 350px;
+    height: 320px;
     font-size: 13px;
-    padding: 15px;
+    padding: 20px;
     margin: 20px;
     text-align: center;
     border-radius: 20px;
@@ -228,9 +240,20 @@ body {
     padding: 10px;
 }
 
-.footer-creador {
+.creador {
     display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    font-size: 12px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.creador h6 {
+    margin-top: 5px;
+}
+
+.redes img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
 }
