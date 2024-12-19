@@ -216,17 +216,17 @@ body {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(1, auto);
-    width: 350px;
-    height: 250px;
+    width: 500px;
+    height: 350px;
     margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 40px;
     border-radius: 20px;
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(234, 234, 234);
 }
 
 .grilla-servicios h5 {
@@ -240,26 +240,6 @@ body {
     align-items: center;
     text-align: center;
     margin-top: 200px;
-}
-
-.contenedor-novedades {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.novedades {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 205, 205);
-    border-radius: 20px;
-    padding: 20px;
-    margin: 10px;
-}
-
-.novedades h4 {
-    color: rgb(163, 0, 0);
 }
 
 .opiniones {
@@ -294,7 +274,7 @@ body {
     height: 30px;
 }
 
-.iniciar {
+.login-comentarios {
     margin-top: 100px;
     margin-left: 100px;
     margin-right: 100px;
@@ -304,12 +284,64 @@ body {
     flex-direction: column;
 }
 
-.iniciar h1 {
+.login-comentarios h1 {
     margin-top: 100px;
 }
 
-.iniciar button {
+.login-comentarios button {
     margin: 2px;
+}
+
+.agregar-comentarios {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.agregar-comentarios h1 {
+    margin-top: 100px;
+}
+
+.agregar-comentarios button {
+    margin: 2px;
+}
+
+.contenedor-mayor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.contenedor-novedades {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.novedades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 350px;
+    height: 300px;
+    padding: 10px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 20px;
+}
+
+.contenido-novedad {
+    margin: 20px;
+    font-size: 13px;
 }
 
 .contenedor-footer {

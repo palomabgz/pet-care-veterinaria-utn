@@ -6,4 +6,16 @@ async function getServicios() {
         return rows;
 }
 
-module.exports = { getServicios }
+async function insertCita(obj) {
+        try {
+                var query = "insert into citas_bd set ?";
+                var rows = await pool.query(query, [obj]);
+                return rows;
+
+        } catch (error) {
+                console.log(error);
+                throw error;
+        }
+}
+
+module.exports = { getServicios, insertCita }

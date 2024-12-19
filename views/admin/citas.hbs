@@ -1,7 +1,7 @@
 <div class="form-citas">
     <h4>Pide tu cita aquí:</h4>
     <div>               
-        <form action="../admin/citas" method="post">
+        <form action="/admin/servicios/citas" method="post">
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input type="text" class="form-control" name="nombre">
@@ -20,6 +20,7 @@
             </div>
             <div class="btn-iniciar">
                 <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary"><a href="/admin/servicios">Regresar</a></button>
             </div>
         </form>
     </div>
