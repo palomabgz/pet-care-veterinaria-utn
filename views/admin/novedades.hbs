@@ -8,6 +8,18 @@
                     {{/if}}>
                 <button class="btn" type="submit">Buscar</button>
             </form>
+                {{#if is_search}}
+                    {{#unless novedades.length}}
+                        <div class="sin-resultados">
+                            <p> No se encontraron resultados para: "{{query}}"</p>
+                        </div>
+                    {{/unless}}
+                    <div class="boton-regresar">
+                        <div class="btn">
+                            <a href="/admin/novedades">Regresar</a>
+                        </div>
+                    </div>
+                {{/if}}
         </div>
     </div>
 
@@ -24,19 +36,6 @@
         </div>
         {{/each}}
     </div>
-
-        {{#if is_search}}
-            {{#unless novedades.length}}
-            <div class="sin-resultados">
-                <p> No se encontraron resultados para: "{{query}}"</p>
-            </div>
-            {{/unless}}
-            <div class="contenedor-mayor">
-                <div class="btn">
-                    <a href="/admin/novedades">Regresar</a>
-                </div>
-            </div>
-        {{/if}}
 
     {{#each novedades}}
     <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-hidden="true">

@@ -124,27 +124,6 @@ body {
     margin: 20px;
 }
 
-.contenedor-body {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 13px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.table-comentarios {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.table-comentarios td {
-    padding: 5px;
-}
-
 .productos p {
     font-size: 15px;
     margin-left: 30px;
@@ -196,17 +175,46 @@ body {
     margin-top: 20px;
 }
 
+.titulo-horarios {
+    margin-bottom: 20px;
+}
+
+.contenedor-citas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 180px;
+}
+
+.contenedor-table {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 13px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.table {
+    width: 700px;
+    height: 200px;
+}
+
 .form-citas {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: left;
-    margin-top: 200px;
+    margin-left: 250px;
+    margin-right: 100px;
 }
 
 .form-citas h4 {
-    margin-bottom: 40px;
+    color: rgb(163, 0, 0);
+    margin-bottom: 30px;
 }
 
 .contenedor-servicios {
@@ -244,6 +252,17 @@ body {
     align-items: center;
     text-align: center;
     margin-top: 200px;
+}
+
+.table-comentarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.table-comentarios td {
+    padding: 5px;
 }
 
 .opiniones {
@@ -356,9 +375,9 @@ body {
 .contenedor-novedades {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    margin-top: 50px;
-    margin-left: 80px;
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 30px;
+    margin-left: 65px;
     margin-right: 80px;
 }
 
@@ -370,6 +389,7 @@ body {
     width: 350px;
     height: 300px;
     padding: 10px;
+    margin: 20px;
     background-color: rgb(241, 241, 241);
     border-radius: 20px;
 }
@@ -384,6 +404,13 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 60px;
+}
+
+.boton-regresar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedor-footer {

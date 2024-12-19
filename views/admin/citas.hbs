@@ -1,79 +1,92 @@
-<div class="form-citas">
-    <h4>Pide tu cita aquí:</h4>
-    <div>               
-        <form action="/admin/servicios/citas" method="post" enctype="multipart/form-data">
-            <div class="mb-3">
-                <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" name="nombre">
+<div class="contenedor-citas">
+    <div class="form-citas">
+        <h4>Pide tu cita aquí</h4>
+        <div>               
+            <form action="/admin/servicios/citas" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">E-mail</label>
+                    <input type="text" class="form-control" name="correo">
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" name="celular">
+                </div>
+                <div class="mb-3">
+                    <label>Imagen de tu mascota: <input type="file" class="form-control" name="imagen" id="imagen"/></label>
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Mensaje</label>
+                    <textarea placeholder="Detalla tu consulta" class="form-control" name="contenido"></textarea>
+                </div>
+                <div class="btn-iniciar">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary"><a href="/admin/servicios">Regresar</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr>
+
+        <div class="contenedor-table">
+        <!-- HORARIOS -->
+        <div>
+            <div class="titulo-horarios">
+                <h5>Horarios:</h5>
             </div>
-            <div class="mb-3">
-                <label for="content" class="form-label">E-mail</label>
-                <input type="text" class="form-control" name="correo">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Horario</th>
+                        <th scope="col">Lunes</th>
+                        <th scope="col">Martes</th>
+                        <th scope="col">Miércoles</th>
+                        <th scope="col">Jueves</th>
+                        <th scope="col">Viernes</th>
+                        <th scope="col">Sábado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">9:00 - 12:30</th>
+                        <td>X</td>
+                        <td>30</td>
+                        <td>X</td>
+                        <td>13</td>
+                        <td>26</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">14:00 - 17:30</th>
+                        <td>18</td>
+                        <td>15</td>
+                        <td>X</td>
+                        <td>56</td>
+                        <td>X</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Medianoche</th>
+                        <td>4</td>
+                        <td>X</td>
+                        <td>6</td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>X</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <p><b>*</b> Horarios sujetos a disponibilidad
+                <br>
+                <b>*</b> X = Cupos no disponibles
+                <br>
+                <b>*</b> N = Cantidad de cupos disponible</p>
             </div>
-            <div class="mb-3">
-                <label for="content" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" name="celular">
-            </div>
-            <div class="mb-3">
-                <label>Imagen de tu mascota: <input type="file" class="form-control" name="imagen" id="imagen"/></label>
-            </div>
-            <div class="mb-3">
-                <label for="content" class="form-label">Mensaje</label>
-                <textarea placeholder="Detalla tu consulta" class="form-control" name="contenido"></textarea>
-            </div>
-            <div class="btn-iniciar">
-                <button type="submit" class="btn btn-primary">Enviar</button>
-                <button type="submit" class="btn btn-primary"><a href="/admin/servicios">Regresar</a></button>
-            </div>
-        </form>
+            <!-- FIN HORARIOS -->
+        </div>
     </div>
 </div>
-<div class="contenedor-body">
-                <!-- HORARIOS -->
-                <div>
-                    <h5>Turnos Disponibles:</h5>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Horario</th>
-                            <th scope="col">Lunes</th>
-                            <th scope="col">Martes</th>
-                            <th scope="col">Miércoles</th>
-                            <th scope="col">Jueves</th>
-                            <th scope="col">Viernes</th>
-                            <th scope="col">Sábado</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">9:00 - 12:30</th>
-                            <td>X</td>
-                            <td>30</td>
-                            <td>X</td>
-                            <td>13</td>
-                            <td>26</td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">14:00 - 17:30</th>
-                            <td>18</td>
-                            <td>5</td>
-                            <td>X</td>
-                            <td>6</td>
-                            <td>X</td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Medianoche</th>
-                            <td>4</td>
-                            <td>X</td>
-                            <td>6</td>
-                            <td>2</td>
-                            <td>5</td>
-                            <td>X</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                <!-- FIN HORARIOS -->
-                </div>
-            </div>
