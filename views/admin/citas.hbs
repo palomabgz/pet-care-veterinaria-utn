@@ -1,7 +1,7 @@
 <div class="form-citas">
     <h4>Pide tu cita aquí:</h4>
     <div>               
-        <form action="/admin/servicios/citas" method="post">
+        <form action="/admin/servicios/citas" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input type="text" class="form-control" name="nombre">
@@ -13,6 +13,9 @@
             <div class="mb-3">
                 <label for="content" class="form-label">Teléfono</label>
                 <input type="text" class="form-control" name="celular">
+            </div>
+            <div class="mb-3">
+                <label>Imagen de tu mascota: <input type="file" class="form-control" name="imagen" id="imagen"/></label>
             </div>
             <div class="mb-3">
                 <label for="content" class="form-label">Mensaje</label>

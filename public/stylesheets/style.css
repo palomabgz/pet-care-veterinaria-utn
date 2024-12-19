@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #f6feff;
     font-family: "Noto Sans TC", sans-serif;
@@ -274,8 +278,16 @@ body {
     height: 30px;
 }
 
+.login-titulo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
 .login-comentarios {
-    margin-top: 100px;
     margin-left: 100px;
     margin-right: 100px;
     display: flex;
@@ -284,7 +296,7 @@ body {
     flex-direction: column;
 }
 
-.login-comentarios h1 {
+.login-comentarios h3 {
     margin-top: 100px;
 }
 
@@ -308,6 +320,19 @@ body {
 
 .agregar-comentarios button {
     margin: 2px;
+}
+
+.buscador form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.buscador input {
+    width: 250px;
+    margin-right: 10px;
 }
 
 .contenedor-mayor {
@@ -342,6 +367,13 @@ body {
 .contenido-novedad {
     margin: 20px;
     font-size: 13px;
+}
+
+.sin-resultados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
 }
 
 .contenedor-footer {

@@ -1,36 +1,55 @@
     <div class="contenedor-mayor">
-    <h4>Noticias actuales:</h4>
+        <h3>Noticias recientes:</h3>
+        <div class="buscador">
+            <form action="/admin/novedades" method="get">
+                <input class="form-control" placeholder="¿Qué estás buscando...?" type="search" aria-label="Search" name="q" 
+                    {{#if q}} 
+                        value="{{q}}" 
+                    {{/if}}>
+                <button class="btn" type="submit">Buscar</button>
+            </form>
+        </div>
     </div>
-    <div class="contenedor-novedades">
 
+    <div class="contenedor-novedades">
         {{#each novedades}}
         <div>
             <div class="novedades">
                 <div class="contenido-novedad">
                     <h5>{{titulo}}</h5>
                     <p>{{subtitulo}}</p>
-                    <button class="btn" data-toggle="modal" data-target="#Modal{{id}}">Más información</button>
-
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#Modal{{id}}">Más información</button>
                 </div>
             </div>
         </div>
         {{/each}}
     </div>
+
+        {{#if is_search}}
+            {{#unless novedades.length}}
+            <div class="sin-resultados">
+                <p> No se encontraron resultados para: "{{query}}"</p>
+            </div>
+            {{/unless}}
+            <div class="contenedor-mayor">
+                <div class="btn">
+                    <a href="/admin/novedades">Regresar</a>
+                </div>
+            </div>
+        {{/if}}
+
     {{#each novedades}}
     <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="ExampleModalLabel">{{titulo}}</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
                 <div class="modal-body">
                     <p>{{contenido}}</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
                 </div>
             </div>
         </div>
