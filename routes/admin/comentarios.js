@@ -29,7 +29,7 @@ router.post('/modificar', async (req, res, next) => {
             comentario: req.body.content
         }
         var id = req.body.id;
-        await comentariosModel.updateComentariosById(id, obj);
+        await comentariosModel.updateComentarioById(id, obj);
         res.redirect('/admin/comentarios');
 
     } catch (error) {
