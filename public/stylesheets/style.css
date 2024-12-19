@@ -168,6 +168,11 @@ body {
 }
 
 .grilla-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -187,10 +192,60 @@ body {
     margin-top: 20px;
 }
 
+.form-citas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-top: 200px;
+}
+
+.form-citas h4 {
+    margin-bottom: 40px;
+}
+
+.contenedor-servicios {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.grilla-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(1, auto);
+    width: 350px;
+    height: 250px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgb(214, 214, 214);
+}
+
+.grilla-servicios h5 {
+    color: rgb(163, 0, 0);
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 200px;
+}
+
 .contenedor-novedades {
     display: flex;
     flex-direction: row;
-    width: auto;
+    align-items: center;
 }
 
 .novedades {

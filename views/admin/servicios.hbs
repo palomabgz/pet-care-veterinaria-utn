@@ -1,14 +1,19 @@
-<div class="listado">
+<div class="servicios">
     <h3>Nuestros servicios</h3>
     <p>Recuerda agendar una cita a través de nuestra página</p>
 </div>
-<div class="grilla-servicios">
-    {{#each novedades}}
-    <div class="grilla-item-servicios">
-        <h5>{{titulo}}</h5>
-        {{!-- <img src="./img/GROOMING.png" alt="peluquería"> --}}
-        <p>{{contenido}}</p>
+<div class="contenedor-servicios">
+        {{#each servicios}}
+    <div class="grilla-servicios">
+        <div>
+            <h5>{{titulo}}</h5>
+            {{!-- <img src="./img/GROOMING.png" alt="peluquería"> --}}
+            <p>{{contenido}}</p>
+            <div>
+                <a href="/admin/citas"><button class="btn" onclick="elegirServicio({{id}})">Pedir cita</button></a>
+            </div>
+        </div>
     </div>
-    {{/each}}
-        <button class="btn" onclick="elegirServicio('Peluquería Canina')">Pedir cita</button>
+        {{/each}}
+
 </div>

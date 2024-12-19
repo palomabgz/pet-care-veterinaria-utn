@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var comentariosModel = require('../models/comentariosModel');
-var novedadesModel = require('../models/novedadesModel');
 
 var nodemailer = require('nodemailer');
 
@@ -13,12 +12,6 @@ router.get('/', async function(req, res, next) {
   });
 });
 
-router.get('/', async function(req, res, next) {
-  var novedades = await novedadesModel.getNovedades();
-  res.render('index' , {
-    novedades
-  })
-});
 
 router.post('/', async (req, res, next) => {
   var email = req.body.email;

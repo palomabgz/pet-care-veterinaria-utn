@@ -10,10 +10,11 @@ var session = require('express-session');
 var pool = require('./models/bd');
 
 var indexRouter = require('./routes/index'); //routes/index.js
-var serviciosRouter = require('./routes/admin/servicios'); //routes/servicios.js
 var loginRouter = require('./routes/admin/login'); //routes/admin.js
+var serviciosRouter = require('./routes/admin/servicios'); //routes/servicios.js
 var adminRouter = require('./routes/admin/comentarios'); //routes/comentarios.js
 var novedadesRouter = require('./routes/admin/novedades'); //routes/novedades.js
+var citasRouter = require('./routes/admin/citas'); //routes/citas.js
 
 var app = express();
 
@@ -49,19 +50,24 @@ app.use('/admin/login', loginRouter);
 app.use('/admin/comentarios', secured, adminRouter);
 app.use('/admin/novedades', novedadesRouter);
 app.use('/admin/servicios', serviciosRouter);
+app.use('/admin/citas', citasRouter);
 
 // consulta:
-pool.query('select * from comentarios_bd').then(function (resultados){
-  console.log(resultados)
-});
+// pool.query('select * from comentarios_bd').then(function (resultados){
+//   console.log(resultados)
+// });
 
-pool.query('select * from servicios_bd').then(function (resultados){
-  console.log(resultados)
-});
+// pool.query('select * from servicios_bd').then(function (resultados){
+//   console.log(resultados)
+// });
 
-pool.query('select * from novedades_bd').then(function (resultados){
-  console.log(resultados)
-});
+// pool.query('select * from novedades_bd').then(function (resultados){
+//   console.log(resultados)
+// });
+
+// pool.query('select * from citas_bd').then(function (resultados){
+//   console.log(resultados)
+// });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
