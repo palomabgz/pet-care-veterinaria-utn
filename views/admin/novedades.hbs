@@ -3,8 +3,8 @@
         <div class="buscador">
             <form action="/admin/novedades" method="get">
                 <input class="form-control" placeholder="¿Qué estás buscando...?" type="search" aria-label="Search" name="q" 
-                    {{#if q}} 
-                        value="{{q}}" 
+                    {{#if query}} 
+                        value="{{query}}" 
                     {{/if}}>
                 <button class="btn" type="submit">Buscar</button>
             </form>
@@ -15,8 +15,8 @@
                         </div>
                     {{/unless}}
                     <div class="boton-regresar">
-                        <div class="btn">
-                            <a href="/admin/novedades">Regresar</a>
+                        <div>
+                            <a href="/admin/novedades"><button class="btn">Atrás</button></a>
                         </div>
                     </div>
                 {{/if}}
@@ -36,6 +36,14 @@
         </div>
         {{/each}}
     </div>
+
+    {{#if novedades.length}}
+        {{#unless is_search}}
+            <div class="boton-regresar">
+                <a href="/"><button class="btn">Regresar</button></a>
+            </div>
+        {{/unless}}
+    {{/if}}
 
     {{#each novedades}}
     <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-hidden="true">

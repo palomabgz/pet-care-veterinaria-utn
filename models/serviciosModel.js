@@ -18,4 +18,4 @@ async function insertCita(obj) {
         }
 }
 
-module.exports = { getServicios, insertCita }
+module.exports = { getServicios, insertCita };

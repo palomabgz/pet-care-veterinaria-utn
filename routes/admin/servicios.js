@@ -46,15 +46,18 @@ router.post('/citas', async (req, res, next) => {
             res.render('admin/citas', {
                 layout: 'admin/layout',
                 error: true,
-                message: 'Todos los campos son obligatorios'
+                message: 'Todos los campos son obligatorios',
+                errorType: 'missing_fields'
             });
         }
+
     } catch (error) {
         console.log(error);
         res.render('admin/citas', {
             layout: 'admin/layout',
             error: true,
-            message: 'Error al enviar tu consulta'
+            message: 'Error al reservar tu cita',
+            errorType: 'send_error'
         });
     }
 });

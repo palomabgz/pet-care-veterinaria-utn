@@ -7,7 +7,6 @@
     <div class="grilla-servicios">
         <div>
             <h5>{{titulo}}</h5>
-            {{!-- <img src="./img/GROOMING.png" alt="peluquería"> --}}
             <p>{{contenido}}</p>
             <div>
                 <a href="/admin/servicios/citas"><button class="btn" onclick="elegirServicio({{id}})">Pedir cita</button></a>
@@ -15,5 +14,7 @@
         </div>
     </div>
         {{/each}}
-
+</div>
+<div class="btn-servicios">
+    <button type="button" class="btn btn-primary" onclick="history.back()">Regresar</button>
 </div>

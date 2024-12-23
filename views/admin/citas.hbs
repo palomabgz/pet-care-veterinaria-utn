@@ -1,6 +1,8 @@
 <div class="contenedor-citas">
     <div class="form-citas">
-        <h4>Pide tu cita aquí</h4>
+            <div>
+                <h4>Reserva tu cita aquí:</h4>
+            </div>
         <div>               
             <form action="/admin/servicios/citas" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
@@ -24,11 +26,14 @@
                 </div>
                 <div class="btn-iniciar">
                     <button type="submit" class="btn btn-primary">Enviar</button>
-                    <button type="submit" class="btn btn-primary"><a href="/admin/servicios">Regresar</a></button>
+                    <button type="button" class="btn btn-primary" onclick="history.back()">Atrás</button>
                 </div>
             </form>
+            <br>
             {{#if message}}
-                {{message}}
+                <div>
+                    {{message}}
+                </div>
             {{/if}}
         </div>
     </div>

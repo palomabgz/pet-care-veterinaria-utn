@@ -26,6 +26,12 @@ body {
     font-size: 14px;
 }
 
+.faq-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
 .btn {
     height: 35px;
     background-color: rgb(163, 0, 0);
@@ -140,6 +146,14 @@ body {
     margin-left: 50px;
 }
 
+.boton-vertodos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
 .grilla-inicio {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -251,7 +265,14 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 150px;
+}
+
+.btn-servicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
 
 .table-comentarios {
@@ -397,6 +418,13 @@ body {
 .contenido-novedad {
     margin: 20px;
     font-size: 13px;
+}
+
+.btn-novedades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 
 .sin-resultados {
