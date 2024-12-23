@@ -16,8 +16,12 @@ router.get('/', async function(req, res, next) {
 });
 
 router.get('/citas', (req, res, next) => {
+    const message = req.session.message;
+    delete req.session.message; 
+
     res.render('admin/citas', {
-        layout: 'admin/layout'
+        layout: 'admin/layout',
+        message: message || null
     });
 });
 
@@ -35,10 +39,8 @@ router.post('/citas', async (req, res, next) => {
                 img_id
             });
 
-            res.redirect('/admin/citas', {
-                layout: 'admin/layout',
-                message: 'Cita enviada'
-            });
+            req.session.message = 'Cita enviada';
+            res.redirect('/admin/servicios/citas');
 
         } else {
             res.render('admin/citas', {
