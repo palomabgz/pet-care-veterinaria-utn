@@ -2,7 +2,7 @@
     <h3>Modifica tu comentario</h3>
     <div>
         <form action="/admin/comentarios/modificar" method="post">
-        <input type="hidden" name="id" value="{{id}}">
+        <input type="hidden" name="id" value="{{comentario.id}}">
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input type="text" class="form-control" name="name" value="{{comentario.nombre}}">
